@@ -1,0 +1,73 @@
+* {
+    -fx-background-color: #545151;
+}
+
+.button {
+    -fx-background-color: #1f5297;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-background-color: #bfbfbf;
+    -fx-text-fill: white;
+}
+
+#title {
+    -fx-background-color: #545151;
+    -fx-text-fill: white;
+}
+
+#titleContainer {
+    -fx-background-color: #545151;
+}
+
+/*
+end of menu, start of main css override
+ */
+#root {
+    -fx-background-color: #545151;
+}
+
+#choiceBox{
+    -fx-background-color: #2a2929;
+    -fx-text-fill: white;
+}
+
+#choiceBox > .label{
+    -fx-text-fill: white;
+    -fx-background-color: #2a2929;
+}
+
+#container {
+    -fx-background-color: #545151;
+}
+
+-text-field {
+    -fx-background-color: #bfbfbf;
+    -fx-text-fill: black;
+}
+
+.text-field > .label{
+    -fx-text-fill: white;
+    -fx-background-color: #bfbfbf;
+}
+
+.text-field:focused {
+    -fx-background-color: #1f5297;
+}
+
+.text-field:hover {
+    -fx-background-color: #bfbfbf;
+}
+
+.text-field:hover:focused {
+    -fx-background-color: #1f5297;
+}
+
+#canvas{
+    -fx-background-color: gray;
+}
+
+#canvasScrollPane {
+    -fx-background-color: gray;
+}

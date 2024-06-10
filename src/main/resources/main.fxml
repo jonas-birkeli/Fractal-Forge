@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="root" minHeight="400" minWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.MainController"
+  stylesheets="/css/main.css">
+  <VBox fx:id="sidebar" maxWidth="150" minWidth="100" prefWidth="150">
+    <Label fx:id="proggangTitle">Fractal Forge</Label>
+    <ChoiceBox fx:id="choiceBox" onAction="#handleChoiceBoxAction"/>
+    <ScrollPane fx:id="transformContainerScrollPane" styleClass="transformContainerScrollPane" minHeight="0" maxHeight="200" minWidth="170" maxWidth="170" vbarPolicy="ALWAYS">
+      <VBox fx:id="transformContainer" styleClass="transformContainer"/>
+    </ScrollPane>
+    <VBox>
+      <VBox>
+        <HBox>
+          <Label fx:id="canvasSizeLabel" text="Resolution: "/>
+          <Label fx:id="canvasSizeValueLabel"/>
+        </HBox>
+        <Slider fx:id="canvasSizeSlider" max="2000" min="100" onDragDetected="#updateCanvasSize"
+          onMouseDragged="#updateCanvasSize" onMouseReleased="#updateCanvasSize" value="500"/>
+      </VBox>
+      <VBox>
+        <HBox>
+          <Label fx:id="iterationLabel" text="Iterations: "/>
+          <Label fx:id="iterationValueLabel"/>
+        </HBox>
+        <Slider fx:id="iterationSlider" max="500000" min="1000" onDragDetected="#updateIterations"
+          onMouseDragged="#updateIterations" onMouseReleased="#updateIterations" value="10000"/>
+      </VBox>
+      <VBox>
+        <HBox>
+          <Label fx:id="zoomLabel" text="Zoom: "/>
+        </HBox>
+        <HBox>
+          <Button fx:id="zoomUpButton" onAction="#zoomUp" text="+"/>
+          <Button fx:id="zoomDownButton" onAction="#zoomDown" text="-"/>
+          <Button fx:id="addTransformButton" onAction="#addTransform" text="Add Transform"/>
+        </HBox>
+      </VBox>
+    </VBox>
+    <VBox fx:id="savePathBox">
+      <Label fx:id="saveLabel" text="Save to file"/>
+      <TextField fx:id="saveToFile" text="" promptText="File Name" onAction="#handleSaveToFile"/>
+    </VBox>
+    <VBox fx:id="toggleableItems">
+      <CheckBox fx:id="heatmapCheckbox" onAction="#toggleHeatmap" text="Heatmap"/>
+
+      <VBox fx:id="juliaToggleableItems">
+        <CheckBox fx:id="inverseCheckbox" onAction="#updateInverseTransform" text="Inverse"/>
+        <CheckBox fx:id="trackCursorPosCheckbox" onAction="#toggleTrackCursorPos" text="Track Cursor"/>
+        <VBox fx:id="rootBox">
+          <Label fx:id="rootNumberLabel" text="Complex root"/>
+          <TextField fx:id="rootNumberField" onAction="#updateRootNumber" promptText="Nth root"/>
+        </VBox>
+      </VBox>
+    </VBox>
+    <VBox fx:id="backContainer">
+      <Button fx:id="backButton" onAction="#handleBackButton" text="Back"/>
+    </VBox>
+  </VBox>
+  <ScrollPane fx:id="canvasScrollPane" hbarPolicy="NEVER" vbarPolicy="NEVER" fitToWidth="true"
+    fitToHeight="true">
+    <Canvas fx:id="canvas" height="600" width="600"/>
+  </ScrollPane>
+</SplitPane>
+

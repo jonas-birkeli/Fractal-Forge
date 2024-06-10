@@ -1,0 +1,157 @@
+@import url('darkMode.css');
+
+
+#root {
+  -fx-spacing: 20;
+  -fx-background-color: #006769;
+}
+
+#proggangTitle{
+  -fx-font-size: 20;
+  -fx-text-fill: black;
+  -fx-padding: 10;
+}
+
+#sidebar {
+  -fx-min-width: 200;
+  -fx-alignment: top_center;
+  -fx-spacing: 30px;
+}
+
+#choiceBox{
+  -fx-background-color: #40a578;
+  -fx-border-color: black;
+  -fx-border-radius: 10;
+  -fx-background-radius: 10;
+  -fx-text-fill: black;
+  -fx-padding: 10;
+  -fx-spacing: 10;
+}
+
+#choiceBox > .label{
+  -fx-text-fill: black;
+  -fx-background-color: #40a578;
+}
+
+#transformContainer {
+  -fx-background-color: #40a578;
+  -fx-padding: 10;
+  -fx-spacing: 20;
+}
+
+#transformContainerScrollPane {
+  -fx-padding: 5;
+  -fx-background-color: #40a578;
+  -fx-spacing: 20;
+  -fx-background-size: auto;
+}
+
+.text-field {
+  -fx-border-color: black;
+  -fx-border-radius: 5;
+  -fx-background-radius: 5;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+  -fx-max-width: 50;
+}
+
+-text-field {
+  -fx-background-color: #9dde8b;
+  -fx-text-fill: black;
+}
+
+.text-field > .label{
+  -fx-text-fill: black;
+  -fx-background-color: #9dde8b;
+}
+
+.text-field:focused {
+  -fx-background-color: #e6ff94;
+  -fx-border-color: black;
+}
+
+.text-field:hover {
+  -fx-background-color: #40a578;
+  -fx-border-color: black;
+  -fx-transition: all 0.5s ease;
+}
+
+.text-field:hover:focused {
+  -fx-background-color: #e6ff94;
+  -fx-border-color: black;
+  -fx-transition: all 0.5s ease;
+}
+
+.button {
+  -fx-border-color: black;
+  -fx-border-radius: 5;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+.button {
+  -fx-background-color: #40a578;
+  -fx-text-fill: black;
+}
+
+.button:hover {
+  -fx-background-color: #9dde8b; /* Hover background color */
+  -fx-text-fill: black; /* Hover text color */
+  -fx-transition: all 0.5s ease;
+}
+
+.scroll-pane {
+  -fx-min-height: 100;
+  -fx-hbar-policy: never;
+}
+
+#canvas{
+  -fx-background-color: gray;
+  -fx-padding: 20;
+}
+
+.slider {
+  -show-value-on-interaction: true;
+}
+
+#backContainer {
+  -fx-spacing: 20;
+  -fx-alignment: BOTTOM_CENTER;
+}
+
+#filepath{}
+
+#iterations{}
+
+#write{}
+
+#saveToFile {
+  -fx-min-width: 100;
+}
+
+#saveLabel {
+  -fx-font-size: 15;
+}
+
+#savePathBox {
+  -fx-padding: 0;
+  -fx-spacing: 5;
+  -fx-alignment: center;
+}
+
+#toggleableItems {
+  -fx-spacing: 5;
+  -fx-padding: 25, 5, 5, 5;
+}
+
+#rootBox {
+  -fx-spacing: 5;
+  -fx-padding: 5;
+  -fx-alignment: center;
+}
+
+#rootNumberField {
+  -fx-min-width: 75;
+}
+
+#juliaToggleableItems {
+  -fx-spacing: 5;
+}

@@ -1,0 +1,13 @@
+Affine2D
+0.0, 0.0
+1.0, 1.0
+0.5, 0.0, 0.0, 0.5, 0.0, 0.0
+0.5, 0.0, 0.0, 0.5, 0.25, 0.5
+0.5, 0.0
+Probability
+33.0, 66.0, 99.0
+
+# CSS file path
+
+# View file path
+/menu.fxml

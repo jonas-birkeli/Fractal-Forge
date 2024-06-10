@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+  fx:controller="frontend.controllers.MenuController" prefHeight="600.0" prefWidth="800.0"
+  stylesheets="/css/menu.css">
+  <VBox prefHeight="400" prefWidth="600">
+    <HBox fx:id="titleContainer">
+      <Label fx:id="title" text="Fractal Forge"/>
+    </HBox>
+    <HBox fx:id="menuButtons">
+      <Button fx:id="startButton" text="Start" onAction="#handleStartButton"/>
+      <Button fx:id="loadButton" text="Load" onAction="#handleLoadButton"/>
+    </HBox>
+    <CheckBox fx:id="darkModeButton" onAction="#handleDarkModeButton"/>
+    <HBox fx:id="exitContainer">
+      <Button fx:id="exit" text="Exit" onAction="#handleExitButton"/>
+    </HBox>
+    <VBox fx:id="help" styleClass="help">
+      <Label text="About" styleClass="large"/>
+      <Label text="This is a program for generating fractals."/>
+      <Label text="To get started, click the 'Start' button."/>
+      <Label text="To load a saved fractal, click the 'Load' button."/>
+      <Label text="Edit fractals" styleClass="large"/>
+      <Label text="To edit a fractal, change the values in the input fields on the left."/>
+      <Label text="To add a transform, click the 'Add Transform' button."/>
+      <Label text="To remove a transform from the list, make every element equal to 0 and press Enter."/>
+      <Label text="To edit the probability for each transform, change the numbers below the transforms and make sure that it follows this formula."/>
+      <Label text="25% for each transform is 25, 50, 75, 100, as we use Binary search to calculate probability."/>
+      <Label text="To save a fractal, type a name in the text field and press Enter."/>
+      <Label text="Extras" styleClass="large"/>
+      <Label text="Heatmap is only available for everything except inverse transforms."/>
+      <Label text="Inverse transforms are only available for Julia sets."/>
+      <Label text="The cursor position is only tracked for Julia sets."/>
+      <Label text="The root number is only available for inverse Julia sets."/>
+      <Label text=""/>
+      <Label text="Proggang INC. 2024"/>
+    </VBox>
+  </VBox>
+
+</ScrollPane>
